@@ -28,7 +28,7 @@ for r = 1:nrow
             D(i, :) = [IndexToAssignment(i, F(k).card) F(k).val(i)];
         end
         
-        if sum(F(k).val) ~= 1
+        if abs(sum(F(k).val) - 1) > 0.00001
             NCorUC = UC;
         else
             NCorUC = NC;
