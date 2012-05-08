@@ -18,7 +18,7 @@ for r = 1:nrow
     for c = 1:ncol
         k = LAYOUT(r, c);
         if k == 0
-            return;
+            continue;
         end
         n = length(F(k).val);
         m = length(F(k).var);
